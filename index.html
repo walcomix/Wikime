@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#ffffff">
+<title>ویکی‌می — دانشنامهٔ آزاد</title>
+<style>
+:root{--blue:#0645ad;--link:#36c;--border:#a7d7f9;--line:#eaecf0;--text:#202122;--muted:#54595d;--panel:#f8f9fa;--green:#14866d}
+*{box-sizing:border-box}
+body{margin:0;background:#fff;color:var(--text);font:16px/1.75 system-ui,-apple-system,"Segoe UI",Tahoma,Arial,sans-serif}
+a{color:var(--link);text-decoration:none;cursor:pointer}a:hover{text-decoration:underline}
+button,input,textarea,select{font:inherit}
+button{cursor:pointer}
+.top{display:flex;align-items:center;gap:16px;padding:15px 22px;border-bottom:1px solid var(--line);background:#fff;position:sticky;top:0;z-index:5}
+.brand{display:flex;align-items:center;gap:10px;min-width:190px;color:inherit}
+.mark{width:48px;height:48px;border:2px solid #72777d;border-radius:50%;display:grid;place-items:center;font:700 23px Georgia,serif;color:#54595d;background:linear-gradient(135deg,#fff,#eaecf0)}
+.brand-title{font:26px Georgia,"Times New Roman",serif;line-height:1.1}
+.brand-sub{font-size:12px;color:var(--muted)}
+.search{display:flex;max-width:640px;flex:1;gap:7px}
+.search input{flex:1;min-width:0;padding:9px 12px;border:1px solid #a2a9b1;border-radius:2px;background:#fff}
+.btn{border:1px solid #a2a9b1;background:#f8f9fa;color:#202122;padding:7px 13px;border-radius:2px}
+.btn:hover{background:#eaecf0}
+.btn.primary{background:#36c;border-color:#36c;color:white}
+.btn.primary:hover{background:#2a4b8d}
+.top-links{display:flex;gap:13px;white-space:nowrap;font-size:14px}
+.layout{display:grid;grid-template-columns:205px minmax(0,1fr);gap:30px;max-width:1440px;margin:auto;padding:22px}
+.sidebar{font-size:14px;color:var(--muted)}
+.side-logo{display:flex;gap:10px;align-items:center;margin:5px 0 20px}
+.side-logo .mark{width:38px;height:38px;font-size:18px}
+.side-title{font-size:13px;font-weight:700;border-bottom:1px solid var(--line);padding-bottom:4px;margin:18px 0 7px;color:#54595d}
+.side-link{display:block;padding:3px 0}
+.content{min-width:0}
+.page-tabs{display:flex;align-items:center;justify-content:space-between;gap:15px;border-bottom:1px solid var(--line);margin-bottom:18px}
+.tabs{display:flex;gap:20px;flex-wrap:wrap}
+.tab{padding:7px 0;border-bottom:2px solid transparent;color:var(--link);font-size:14px}
+.tab.active{border-bottom-color:#202122;color:#202122;font-weight:700}
+.page-actions{display:flex;gap:12px;align-items:center;font-size:14px;flex-wrap:wrap}
+h1{font-family:Georgia,"Times New Roman",serif;font-size:32px;font-weight:400;line-height:1.25;margin:10px 0 6px;border-bottom:1px solid var(--line);padding-bottom:8px}
+.subtitle{font-size:14px;color:var(--muted);margin-bottom:15px}
+.notice{background:#f8f9fa;border:1px solid var(--line);padding:12px 15px;margin:14px 0}
+.welcome{background:#f8f9fa;border:1px solid var(--line);padding:20px;margin:15px 0}
+.welcome h2{margin-top:0}
+.welcome-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}
+.welcome-card{background:white;border:1px solid var(--line);padding:14px}
+.welcome-card h3{margin:0 0 5px;font-size:17px}
+h2{font-size:24px;font-weight:400;border-bottom:1px solid var(--line);margin:25px 0 8px;line-height:1.35}
+h3{font-size:19px;font-weight:600;margin:20px 0 5px}
+p{margin:9px 0}
+.toc{float:right;min-width:210px;max-width:280px;margin:0 0 15px 22px;padding:10px 15px;border:1px solid var(--line);background:#f8f9fa;font-size:14px}
+.toc-title{font-weight:700;text-align:center}
+.toc ol{margin:5px 0;padding-right:22px}
+.infobox{float:left;width:255px;margin:0 0 15px 0;padding:10px;border:1px solid #a2a9b1;background:#f8f9fa;font-size:14px}
+.infobox-title{text-align:center;font-weight:700;font-size:17px;border-bottom:1px solid #a2a9b1;padding-bottom:5px}
+.infobox-art{height:80px;display:grid;place-items:center;font-size:38px;color:#72777d}
+.infobox-row{display:grid;grid-template-columns:42% 58%;border-top:1px solid #eaecf0;padding:4px 0}
+.article-body{overflow:auto}
+.edit-area{width:100%;min-height:320px;padding:12px;border:1px solid #a2a9b1;direction:rtl;line-height:1.8}
+.field{display:block;width:100%;padding:9px 10px;border:1px solid #a2a9b1;margin:5px 0 13px;background:white}
+.field-label{font-weight:600;font-size:14px}
+.article-list{padding-right:22px}
+.article-list li{margin:4px 0}
+.footer{border-top:1px solid var(--line);margin-top:35px;padding:15px 0;color:var(--muted);font-size:13px}
+.small{font-size:13px;color:var(--muted)}
+.hidden{display:none!important}
+.toast{position:fixed;bottom:18px;left:18px;background:#202122;color:white;padding:10px 15px;border-radius:3px;box-shadow:0 2px 8px #0003;z-index:10}
+@media(max-width:850px){.top{flex-wrap:wrap;padding:12px}.brand{min-width:auto}.top-links{margin-right:auto}.search{order:3;flex-basis:100%;max-width:none}.layout{grid-template-columns:1fr;padding:14px;gap:15px}.sidebar{display:none}.welcome-grid{grid-template-columns:1fr}.page-actions{display:none}.toc{float:none;max-width:none;width:100%;margin:12px 0}.infobox{float:none;width:100%;max-width:350px;margin:12px auto}.page-tabs{align-items:flex-start}.tabs{gap:12px}h1{font-size:28px}}
+</style>
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="#" onclick="showHome();return false" aria-label="ویکی‌می، صفحهٔ اصلی">
+    <div class="mark">و</div><div><div class="brand-title">ویکی‌می</div><div class="brand-sub">دانشنامه‌ای که تو می‌سازی</div></div>
+  </a>
+  <form class="search" id="searchForm">
+    <input id="searchInput" type="search" placeholder="جستجو در ویکی‌می" aria-label="جستجو">
+    <button class="btn" type="submit">جستجو</button>
+  </form>
+  <div class="top-links"><a href="#" onclick="showCreate();return false">ایجاد مقاله</a><a href="#" onclick="showAbout();return false">درباره</a></div>
+</header>
+<div class="layout">
+  <aside class="sidebar">
+    <div class="side-logo"><div class="mark">و</div><div><b>ویکی‌می</b><div class="small">نسخهٔ آزمایشی</div></div></div>
+    <div class="side-title">پیمایش</div>
+    <a class="side-link" href="#" onclick="showHome();return false">صفحهٔ اصلی</a>
+    <a class="side-link" href="#" onclick="showAllArticles();return false">فهرست مقاله‌ها</a>
+    <a class="side-link" href="#" onclick="showCreate();return false">ایجاد مقالهٔ جدید</a>
+    <a class="side-link" href="#" onclick="showAbout();return false">دربارهٔ ویکی‌می</a>
+    <div class="side-title">ابزارها</div>
+    <a class="side-link" href="#" onclick="exportData();return false">دریافت نسخهٔ پشتیبان</a>
+    <a class="side-link" href="#" onclick="document.getElementById('importFile').click();return false">درون‌ریزی نسخهٔ پشتیبان</a>
+    <input class="hidden" type="file" id="importFile" accept=".json,application/json">
+    <div class="side-title">زبان‌ها</div>
+    <span class="side-link">فارسی</span><span class="side-link small">زبان‌های دیگر در آینده</span>
+  </aside>
+  <main class="content">
+    <div class="page-tabs">
+      <div class="tabs">
+        <a class="tab active" href="#" id="articleTab" onclick="setTab('article');return false">مقاله</a>
+        <a class="tab" href="#" id="discussionTab" onclick="showDiscussion();return false">بحث</a>
+      </div>
+      <div class="page-actions"><a href="#" onclick="showCreate();return false">ایجاد</a><a href="#" onclick="editCurrent();return false">ویرایش</a><a href="#" onclick="showHistory();return false">تاریخچه</a></div>
+    </div>
+    <div id="view"></div>
+    <footer class="footer">متن‌ها و مقاله‌های این نسخه در همین مرورگر ذخیره می‌شوند. ویکی‌می یک پروژهٔ مستقل و غیررسمی است و وابستگی‌ای به بنیاد ویکی‌مدیا ندارد.</footer>
+  </main>
+</div>
+<div id="toast" class="toast hidden" role="status"></div>
+<script>
+const KEY='wikime_articles_v1';
+const starter=[
+ {id:'home',title:'صفحهٔ اصلی',category:'عمومی',updated:new Date().toISOString(),content:`ویکی‌می یک دانشنامهٔ آزاد و قابل گسترش است؛ جایی برای ساختن مقاله‌ها، گردآوری دانش و به‌اشتراک‌گذاشتن ایده‌ها.\\n\\nدر این نسخهٔ آزمایشی می‌توانی مقاله بسازی، مقاله‌ها را ویرایش کنی و با جستجو آن‌ها را پیدا کنی. برای شروع از پیوند «ایجاد مقالهٔ جدید» استفاده کن.\\n\\n## شروع سریع\\n- برای نوشتن مقاله، روی «ایجاد مقالهٔ جدید» بزن.\\n- برای پیدا کردن مقاله، از کادر جستجو استفاده کن.\\n- مقاله‌ها به‌صورت محلی در همین مرورگر ذخیره می‌شوند.\\n\\n## مقاله‌های نمونه\\n- [[ویکی‌پدیا]]\\n- [[دانشنامه]]\\n- [[زمین]]`},
+ {id:'wikipedia',title:'ویکی‌پدیا',category:'دانشنامه‌ها',updated:new Date().toISOString(),content:`ویکی‌پدیا یک دانشنامهٔ آزاد و مشارکتی است که مقاله‌های آن را داوطلبان می‌نویسند و ویرایش می‌کنند. هدف آن گردآوری و در دسترس قراردادن دانش برای همگان است.\\n\\n## تاریخچه\\nویکی‌پدیا در سال ۲۰۰۱ راه‌اندازی شد و به یکی از شناخته‌شده‌ترین دانشنامه‌های آنلاین تبدیل شد.\\n\\n## شیوهٔ کار\\nمقاله‌ها با پیوندهای داخلی به یکدیگر متصل می‌شوند. در یک دانشنامهٔ معتبر، اطلاعات مهم باید با منابع قابل اعتماد پشتیبانی شوند.\\n\\n## منابع\\n- وبگاه رسمی ویکی‌پدیا: https://www.wikipedia.org/`},
+ {id:'encyclopedia',title:'دانشنامه',category:'دانش',updated:new Date().toISOString(),content:`دانشنامه اثری مرجع است که اطلاعات خلاصه و سازمان‌یافته‌ای دربارهٔ موضوعات گوناگون ارائه می‌کند. دانشنامه‌ها می‌توانند چاپی یا دیجیتال باشند.\\n\\n## ویژگی‌ها\\nدانشنامه‌ها معمولاً مقاله‌های موضوعی، پیوندهای ارجاعی و منابعی برای مطالعهٔ بیشتر دارند.\\n\\n## منابع\\nبرای تکمیل این مقاله، منابع معتبر و مرتبط اضافه کنید.`},
+ {id:'earth',title:'زمین',category:'علوم',updated:new Date().toISOString(),content:`زمین سومین سیاره از خورشید و خانهٔ شناخته‌شدهٔ انسان‌ها و بسیاری از شکل‌های حیات است. بخش بزرگی از سطح آن را آب پوشانده است.\\n\\n## ویژگی‌ها\\nزمین دارای جو، میدان مغناطیسی و چرخه‌های طبیعی گوناگون است که به پایداری شرایط زندگی کمک می‌کنند.\\n\\n## منابع\\nبرای مطالعهٔ بیشتر، از منابع علمی و آموزشی معتبر استفاده کنید.`}
+];
+let articles=loadArticles(), currentId='home', currentTab='article', historyLog=[];
+function loadArticles(){try{const x=JSON.parse(localStorage.getItem(KEY));if(Array.isArray(x)&&x.length)return x;}catch(e){}return starter.map(x=>({...x}));}
+function saveArticles(){localStorage.setItem(KEY,JSON.stringify(articles));}
+function slug(s){return s.trim().toLowerCase().replace(/\s+/g,'-').replace(/[^\p{L}\p{N}-]/gu,'')||('article-'+Date.now());}
+function esc(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+function notify(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.remove('hidden');setTimeout(()=>t.classList.add('hidden'),2500);}
+function byId(id){return articles.find(a=>a.id===id);}
+function showHome(){openArticle('home');}
+function openArticle(id){const a=byId(id);if(!a){notify('این مقاله پیدا نشد.');return;}currentId=id;currentTab='article';renderArticle(a);}
+function setTab(tab){currentTab=tab;document.getElementById('articleTab').classList.toggle('active',tab==='article');document.getElementById('discussionTab').classList.toggle('active',tab==='discussion');if(tab==='article')renderArticle(byId(currentId));}
+function renderArticle(a){document.getElementById('articleTab').classList.add('active');document.getElementById('discussionTab').classList.remove('active');const view=document.getElementById('view');const title=a.title;let html=`<h1>${esc(title)}</h1><div class="subtitle">از ویکی‌می، دانشنامهٔ آزاد · آخرین ویرایش: ${new Date(a.updated).toLocaleDateString('fa-IR')}</div>`;
+if(a.id==='home'){
+ html+=`<section class="welcome"><h2 style="border:0;margin-top:0">به ویکی‌می خوش آمدید</h2><p>دانشنامه‌ای آزاد برای نوشتن، خواندن و به‌اشتراک‌گذاری دانش.</p><div class="welcome-grid"><div class="welcome-card"><h3><a href="#" onclick="showAllArticles();return false">📚 مقاله‌ها</a></h3><p>مقاله‌های موجود را ببین و موضوع مورد علاقه‌ات را پیدا کن.</p></div><div class="welcome-card"><h3><a href="#" onclick="showCreate();return false">✍️ نوشتن</a></h3><p>یک مقالهٔ تازه بساز یا مقاله‌ای را کامل‌تر کن.</p></div><div class="welcome-card"><h3><a href="#" onclick="showAbout();return false">🌐 دربارهٔ پروژه</a></h3><p>با نسخهٔ آزمایشی ویکی‌می آشنا شو.</p></div></div></section>`;
+}
+html+=`<div class="article-body">${formatContent(a.content)}</div>`;
+if(a.id==='home'){html+=`<h2>مقاله‌های پیشنهادی</h2><ul class="article-list">${articles.filter(x=>x.id!=='home').map(x=>`<li><a href="#" onclick="openArticle('${x.id}');return false">${esc(x.title)}</a> <span class="small">— ${esc(x.category||'عمومی')}</span></li>`).join('')}</ul>`;}
+view.innerHTML=html;
+}
+function formatContent(raw){
+ let lines=String(raw||'').split(/\r?\n/),out='',inList=false;
+ const closeList=()=>{if(inList){out+='</ul>';inList=false;}};
+ for(let line of lines){let s=line.trim();if(!s){closeList();continue;}
+ if(s.startsWith('### ')){closeList();out+=`<h3>${inline(s.slice(4))}</h3>`;}
+ else if(s.startsWith('## ')){closeList();out+=`<h2>${inline(s.slice(3))}</h2>`;}
+ else if(s.startsWith('# ')){closeList();out+=`<h2>${inline(s.slice(2))}</h2>`;}
+ else if(s.startsWith('- ')||s.startsWith('* ')){if(!inList){out+='<ul>';inList=true;}out+=`<li>${inline(s.slice(2))}</li>`;}
+ else{closeList();out+=`<p>${inline(s)}</p>`;}
+ }closeList();return out;
+}
+function inline(s){let x=esc(s);x=x.replace(/\[\[([^\]]+)\]\]/g,(_,t)=>{let a=articles.find(a=>a.title.toLowerCase()===t.toLowerCase());return a?`<a href="#" onclick="openArticle('${a.id}');return false">${esc(t)}</a>`:`<a href="#" onclick="createFromLink('${esc(t)}');return false" title="ساخت این مقاله">${esc(t)}</a>`;});x=x.replace(/\*\*(.+?)\*\*/g,'<strong>$1</strong>');x=x.replace(/(https?:\/\/[^\s<]+)/g,'<a href="$1" target="_blank" rel="noopener noreferrer">$1</a>');return x;}
+function showCreate(prefill=''){currentTab='create';document.getElementById('articleTab').classList.remove('active');document.getElementById('discussionTab').classList.remove('active');document.getElementById('view').innerHTML=`<h1>ایجاد مقاله</h1><p>عنوان دقیق و محتوای مقاله را وارد کن. برای عنوان‌های بخش از <code>## عنوان بخش</code> و برای پیوند داخلی از <code>[[نام مقاله]]</code> استفاده کن.</p><form id="createForm"><label class="field-label" for="newTitle">عنوان مقاله</label><input class="field" id="newTitle" required maxlength="120" value="${esc(prefill)}" placeholder="مثلاً تاریخ ایران"><label class="field-label" for="newCategory">دسته‌بندی</label><input class="field" id="newCategory" maxlength="80" value="عمومی" placeholder="مثلاً تاریخ، علوم، هنر"><label class="field-label" for="newContent">متن مقاله</label><textarea class="edit-area" id="newContent" required placeholder="مقاله را اینجا بنویس..."></textarea><p class="small">یادآوری: اطلاعات این نسخه فقط در مرورگر فعلی ذخیره می‌شوند و هنوز برای همهٔ کاربران مشترک نیستند.</p><button class="btn primary" type="submit">انتشار مقاله</button> <button class="btn" type="button" onclick="showHome()">لغو</button></form>`;
+ document.getElementById('createForm').onsubmit=e=>{e.preventDefault();let title=document.getElementById('newTitle').value.trim(),content=document.getElementById('newContent').value.trim(),category=document.getElementById('newCategory').value.trim()||'عمومی';if(!title||!content)return;let id=slug(title);if(articles.some(a=>a.id===id)){notify('مقاله‌ای با این عنوان وجود دارد.');return;}let a={id,title,category,content,updated:new Date().toISOString()};articles.push(a);historyLog.push({title,action:'ایجاد',date:new Date().toISOString()});saveArticles();openArticle(id);notify('مقاله ذخیره شد.');};}
+function createFromLink(title){showCreate(title);}
+function editCurrent(){const a=byId(currentId);if(!a)return;document.getElementById('view').innerHTML=`<h1>ویرایش «${esc(a.title)}»</h1><form id="editForm"><label class="field-label">متن مقاله</label><textarea id="editContent" class="edit-area">${esc(a.content)}</textarea><p class="small">ویرایش در این نسخه در مرورگر ذخیره می‌شود.</p><button class="btn primary" type="submit">ذخیرهٔ تغییرات</button> <button class="btn" type="button" onclick="openArticle('${a.id}')">لغو</button></form>`;document.getElementById('editForm').onsubmit=e=>{e.preventDefault();a.content=document.getElementById('editContent').value;a.updated=new Date().toISOString();historyLog.push({title:a.title,action:'ویرایش',date:a.updated});saveArticles();openArticle(a.id);notify('تغییرات ذخیره شد.');};}
+function showAllArticles(){document.getElementById('view').innerHTML=`<h1>فهرست مقاله‌ها</h1><p>در حال حاضر ${articles.length} مقاله در این مرورگر موجود است.</p><ul class="article-list">${[...articles].sort((a,b)=>a.title.localeCompare(b.title,'fa')).map(a=>`<li><a href="#" onclick="openArticle('${a.id}');return false">${esc(a.title)}</a> <span class="small">— ${esc(a.category||'عمومی')}</span></li>`).join('')}</ul><button class="btn primary" onclick="showCreate()">ایجاد مقالهٔ جدید</button>`;}
+function searchArticles(q){q=q.trim().toLowerCase();if(!q){showHome();return;}const results=articles.filter(a=>a.title.toLowerCase().includes(q)||a.content.toLowerCase().includes(q)||String(a.category).toLowerCase().includes(q));document.getElementById('view').innerHTML=`<h1>نتایج جستجو</h1><p>جستجو برای «${esc(q)}» — ${results.length} نتیجه</p>${results.length?`<ul class="article-list">${results.map(a=>`<li><a href="#" onclick="openArticle('${a.id}');return false">${esc(a.title)}</a><p class="small">${esc(a.content.slice(0,130))}…</p></li>`).join('')}</ul>`:'<p>مقاله‌ای پیدا نشد. می‌توانی آن را ایجاد کنی.</p>'}<button class="btn" onclick="showCreate('${esc(q)}')">ایجاد مقاله با این عنوان</button>`;}
+document.getElementById('searchForm').addEventListener('submit',e=>{e.preventDefault();searchArticles(document.getElementById('searchInput').value);});
+function showDiscussion(){document.getElementById('articleTab').classList.remove('active');document.getElementById('discussionTab').classList.add('active');document.getElementById('view').innerHTML=`<h1>بحث: ${esc((byId(currentId)||{}).title||'')}</h1><div class="notice">صفحه‌های بحث در نسخهٔ اولیه هنوز ذخیره نمی‌شوند. این بخش برای گفت‌وگو دربارهٔ بهبود مقاله‌ها در نسخه‌های بعدی در نظر گرفته شده است.</div><button class="btn" onclick="openArticle('${currentId}')">بازگشت به مقاله</button>`;}
+function showHistory(){const rows=historyLog.slice().reverse();document.getElementById('view').innerHTML=`<h1>تاریخچهٔ ویرایش</h1>${rows.length?`<ul>${rows.map(x=>`<li>${esc(x.action)} «${esc(x.title)}» — ${new Date(x.date).toLocaleString('fa-IR')}</li>`).join('')}</ul>`:'<p>تاریخچهٔ این نشست خالی است. این نسخه هنوز تاریخچه را پس از بستن مرورگر نگه نمی‌دارد.</p>'}`;}
+function showAbout(){document.getElementById('view').innerHTML=`<h1>دربارهٔ ویکی‌می</h1><p><b>ویکی‌می</b> یک نمونهٔ اولیه برای ساخت دانشنامه‌های شخصی و مشارکتی است؛ با رابط کاربری الهام‌گرفته از دانشنامه‌های کلاسیک.</p><h2>وضعیت نسخه</h2><p>این نسخهٔ تک‌فایلی، امکان ساخت و ویرایش مقاله، جستجو و پشتیبان‌گیری را فراهم می‌کند. داده‌ها در حافظهٔ محلی مرورگر ذخیره می‌شوند.</p><h2>محدودیت‌ها</h2><ul><li>هنوز حساب کاربری یا پایگاه دادهٔ آنلاین ندارد.</li><li>مقاله‌های کاربران مختلف به‌صورت خودکار با هم مشترک نیستند.</li><li>برای انتشار عمومی واقعی، باید سرویس پایگاه داده و احراز هویت اضافه شود.</li></ul><button class="btn" onclick="showHome()">بازگشت به صفحهٔ اصلی</button>`;}
+function exportData(){const blob=new Blob([JSON.stringify(articles,null,2)],{type:'application/json'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download='wikime-backup.json';a.click();URL.revokeObjectURL(url);notify('نسخهٔ پشتیبان آماده شد.');}
+document.getElementById('importFile').addEventListener('change',async e=>{const f=e.target.files[0];if(!f)return;try{const x=JSON.parse(await f.text());if(!Array.isArray(x)||!x.every(a=>a.title&&a.id&&typeof a.content==='string'))throw Error();if(confirm('مقاله‌های فعلی با نسخهٔ پشتیبان جایگزین شوند؟')){articles=x;saveArticles();showHome();notify('نسخهٔ پشتیبان درون‌ریزی شد.');}}catch(err){notify('فایل پشتیبان معتبر نیست.');}e.target.value='';});
+openArticle('home');
+</script>
+</body>
+  </html>
